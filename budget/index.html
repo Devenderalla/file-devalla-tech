@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Tracker</title>
+<meta name="theme-color" content="#14352a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <h1 class="wordmark">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="24" height="24" rx="6" stroke="#14352a" stroke-width="1.6"/>
+        <rect x="4.5" y="4.5" width="17" height="17" rx="3.5" stroke="#14352a" stroke-width="0.8" opacity="0.45"/>
+        <path d="M8.5 9h9M8.5 13h9M8.5 17h5.5" stroke="#14352a" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Budget Tracker
+    </h1>
+    <div class="topbar-actions">
+      <button class="ghost-btn icon-btn" id="themeBtn" aria-label="Theme"></button>
+      <label class="visually-hidden" for="currency">Currency</label>
+      <select id="currency" class="currency-select">
+        <option value="INR">₹ INR</option>
+        <option value="USD">$ USD</option>
+        <option value="EUR">€ EUR</option>
+        <option value="GBP">£ GBP</option>
+      </select>
+      <button class="ghost-btn" id="captureBtn">Paste SMS</button>
+      <button class="ghost-btn" id="manageBtn">Manage</button>
+      <button class="ghost-btn" id="exportBtn">Export CSV</button>
+    </div>
+  </header>
+
+  <!-- hero plate -->
+  <section class="plate" aria-label="Month summary">
+    <svg class="guilloche" id="guilloche" width="480" height="480" viewBox="0 0 480 480" aria-hidden="true"></svg>
+    <div class="month-nav">
+      <button id="prevMonth" aria-label="Previous month">‹</button>
+      <span class="month-label" id="monthLabel">—</span>
+      <button id="nextMonth" aria-label="Next month">›</button>
+      <button class="back-today" id="backToday" hidden>back to this month</button>
+    </div>
+    <div class="hero-figure" id="heroTotal">—</div>
+    <p class="hero-sub" id="heroSub">&nbsp;</p>
+  </section>
+
+  <!-- trends -->
+  <section class="card trends" id="trendsCard" aria-label="Spending trends">
+    <div class="trend-block">
+      <div class="trend-head"><h2 class="card-title">Day by day</h2><span class="card-title" id="dailyMax"></span></div>
+      <div class="bars" id="dailyBars"></div>
+      <div class="bar-ticks" id="dailyTicks"></div>
+    </div>
+    <div class="trend-block">
+      <div class="trend-head"><h2 class="card-title">Last 6 months</h2></div>
+      <div class="bars" id="moBars"></div>
+      <div class="mo-labels" id="moLabels"></div>
+    </div>
+    <div class="callout" id="callout" hidden></div>
+  </section>
+
+  <div class="grid">
+    <main>
+      <!-- entry form -->
+      <form class="card entry-form" id="entryForm" novalidate>
+        <div class="form-head">
+          <h2 class="card-title" id="formTitle">New entry</h2>
+          <div class="type-toggle" role="group" aria-label="Entry type">
+            <button type="button" id="typeExpense" aria-pressed="true">Expense</button>
+            <button type="button" id="typeIncome" aria-pressed="false">Income</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field field-amount">
+            <label for="amount">Amount</label>
+            <span class="amount-wrap">
+              <span class="sym" id="amountSym">₹</span>
+              <input id="amount" inputmode="decimal" autocomplete="off" placeholder="0">
+            </span>
+          </div>
+          <div class="field field-note">
+            <label for="note" id="noteLabel">Note <span style="font-weight:400;color:var(--ink-3)">(optional)</span></label>
+            <input id="note" autocomplete="off" placeholder="Lunch at Udupi Grand">
+          </div>
+          <div class="field field-date">
+            <label for="date">Date</label>
+            <input id="date" type="date">
+          </div>
+        </div>
+        <div class="chip-row" id="chipRow" role="group" aria-label="Category"></div>
+        <div class="chip-row" id="methodRow" role="group" aria-label="Paid via">
+          <span class="chip-label">Paid via</span>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="stamp-btn" id="submitBtn">Add expense</button>
+          <label class="repeat-label" id="repeatLabel"><input type="checkbox" id="repeatChk">Repeats monthly</label>
+          <button type="button" class="link-btn" id="cancelEdit" hidden>Cancel</button>
+          <span class="form-error" id="formError" role="alert"></span>
+        </div>
+      </form>
+
+      <!-- ledger -->
+      <section class="card ledger" aria-label="Expenses">
+        <div class="sample-note" id="sampleNote" hidden>
+          Sample data is loaded so you can look around ·
+          <button class="link-btn" id="removeSampleBtn">remove it</button>
+        </div>
+        <div class="filter-bar" id="filterBar">
+          <input type="search" id="searchBox" placeholder="Search notes…" aria-label="Search entries">
+          <span id="filterChips" style="display:contents"></span>
+          <button class="link-btn" id="clearFilters" hidden>clear</button>
+          <span class="filter-count" id="filterCount"></span>
+        </div>
+        <div id="ledgerList"></div>
+      </section>
+    </main>
+
+    <!-- side column -->
+    <aside class="side">
+      <section class="card breakdown" aria-labelledby="bdTitle">
+        <div class="bd-head">
+          <h2 class="card-title" id="bdTitle">Where it went</h2>
+          <button class="link-btn" id="setBudgetsBtn">set budgets</button>
+        </div>
+        <div class="bd-list" id="bdList"></div>
+      </section>
+      <section class="card gullak" aria-labelledby="gullakTitle">
+        <h2 class="card-title" id="gullakTitle">Gullak — savings</h2>
+        <div id="goalList"></div>
+        <form class="goal-new" id="goalForm">
+          <input id="goalName" placeholder="Goal — e.g. Diwali" aria-label="Goal name" autocomplete="off">
+          <input id="goalTarget" type="number" min="1" placeholder="Target" aria-label="Target amount">
+          <button type="submit" class="mini-btn">Add</button>
+        </form>
+      </section>
+    </aside>
+  </div>
+
+  <p class="foot">Data stays in this browser · <kbd>?</kbd> for shortcuts</p>
+</div>
+
+<!-- settings -->
+<dialog id="settingsDlg" aria-labelledby="settingsTitle">
+  <div class="dlg-head">
+    <h2 id="settingsTitle">Manage</h2>
+    <button class="dlg-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="dlg-body">
+    <section class="dlg-section" id="secBudgets">
+      <h3 class="card-title">Monthly budgets</h3>
+      <div id="budgetRows"></div>
+      <p class="dlg-hint">Leave blank for no budget. Progress shows in "Where it went".</p>
+    </section>
+    <section class="dlg-section" id="secCategories">
+      <h3 class="card-title">Categories</h3>
+      <div id="catRows"></div>
+      <div class="set-row"><button class="mini-btn" id="addCatBtn">+ Add category</button><span class="dlg-hint" id="addCatHint"></span></div>
+      <p class="dlg-hint">Click a swatch to change its color. Deleting a category moves its entries to Other.</p>
+    </section>
+    <section class="dlg-section" id="secRecurring">
+      <h3 class="card-title">Recurring</h3>
+      <div id="recRows"></div>
+      <p class="dlg-hint">Add one by ticking "Repeats monthly" on a new entry.</p>
+    </section>
+    <section class="dlg-section" id="secData">
+      <h3 class="card-title">Data</h3>
+      <div class="set-row" style="flex-wrap:wrap">
+        <button class="mini-btn" id="captureFromSettings">Add from message</button>
+        <button class="mini-btn" id="importCsvBtn">Import CSV</button>
+        <button class="mini-btn" id="backupBtn">Backup JSON</button>
+        <button class="mini-btn" id="restoreBtn">Restore JSON</button>
+        <input type="file" id="csvFile" accept=".csv,text/csv" hidden>
+        <input type="file" id="jsonFile" accept=".json,application/json" hidden>
+        <button class="mini-btn erase" id="eraseBtn">Erase all data</button>
+      </div>
+      <p class="dlg-hint" id="dataHint">Import accepts this app's exported CSV. Erase removes everything saved on this device.</p>
+    </section>
+  </div>
+</dialog>
+
+<!-- capture from bank / UPI messages -->
+<dialog id="captureDlg" aria-labelledby="captureTitle">
+  <div class="dlg-head">
+    <h2 id="captureTitle">Add from message</h2>
+    <button class="dlg-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="dlg-body">
+    <label class="visually-hidden" for="captureText">Bank or UPI messages</label>
+    <textarea id="captureText" class="capture-text" rows="5" spellcheck="false"
+      placeholder="Paste one or more bank / UPI messages here.&#10;&#10;Rs.450.00 debited from a/c XX1234 on 05-08-26 to VPA swiggy@ybl"></textarea>
+    <div class="set-row" style="flex-wrap:wrap">
+      <button class="mini-btn" id="captureParseBtn">Find transactions</button>
+      <button class="mini-btn" id="captureClearBtn">Clear</button>
+    </div>
+    <p class="dlg-hint" id="captureHint" role="status"></p>
+    <div id="draftList"></div>
+    <div class="set-row" id="draftActions" hidden>
+      <button class="mini-btn" id="draftAddBtn">Add selected</button>
+    </div>
+    <p class="dlg-hint">Parsed entirely in this browser — nothing is uploaded. On Android,
+      installing the app also lets you share a message straight here from your SMS app.</p>
+  </div>
+</dialog>
+
+<!-- shortcuts -->
+<dialog id="keysDlg" aria-labelledby="keysTitle">
+  <div class="dlg-head">
+    <h2 id="keysTitle">Keyboard shortcuts</h2>
+    <button class="dlg-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="keys-grid">
+    <kbd>n</kbd><span>New entry (focus amount)</span>
+    <kbd>[</kbd><span>Previous month</span>
+    <kbd>]</kbd><span>Next month</span>
+    <kbd>t</kbd><span>Back to this month</span>
+    <kbd>/</kbd><span>Search entries</span>
+    <kbd>p</kbd><span>Add from a pasted message</span>
+    <kbd>d</kbd><span>Toggle theme</span>
+    <kbd>?</kbd><span>This help</span>
+  </div>
+</dialog>
+
+<div class="tip" id="tip" role="presentation"></div>
+<div class="toast" id="toast" role="status">
+  <span id="toastMsg"></span>
+  <button id="undoBtn">Undo</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

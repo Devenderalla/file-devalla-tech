@@ -1,0 +1,23 @@
+{
+  "name": "Gym Basics — training guide",
+  "short_name": "Gym Basics",
+  "description": "Equipment library, exercise library, and complete beginner, intermediate and advanced programs. Works offline on the gym floor.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0F1319",
+  "lang": "en-IN",
+  "categories": ["health", "fitness", "education"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Beginner session", "url": "./beginner.html" },
+    { "name": "Equipment library", "url": "./equipment.html" },
+    { "name": "Build a workout", "url": "./builder.html" }
+  ]
+}

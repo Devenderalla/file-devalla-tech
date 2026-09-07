@@ -1,0 +1,674 @@
+I want you to work on my existing fitness website/codebase.
+
+Before making any changes, inspect the entire existing project and understand the current architecture, UI, components, workout logic, equipment library, exercise library, video implementation, Beginner/Intermediate/Advanced flows, and responsive design.
+
+Do NOT rebuild the website from scratch.
+
+Do NOT remove existing features that are already working.
+
+My next major feature is a personalized **“BUILD MY WEEK”** system.
+
+The goal is to turn the website from an exercise/equipment information site into a complete weekly gym-training planner.
+
+==================================================
+CORE USER FLOW
+==============
+
+The user should go through:
+
+1. TRAINING LEVEL
+2. DAYS PER WEEK
+3. FITNESS GOAL
+4. GENERATE WEEK
+5. VIEW DAY-BY-DAY PLAN
+6. START TODAY'S WORKOUT
+7. FOLLOW THE WORKOUT
+8. WATCH 10-SECOND EXERCISE DEMOS
+9. COMPLETE SETS
+10. COOLDOWN / RECOVERY
+
+The final experience should answer:
+
+“I am going to the gym today. What exactly should I do?”
+
+==================================================
+STEP 1 — TRAINING LEVEL
+=======================
+
+Ask:
+
+WHAT'S YOUR TRAINING LEVEL?
+
+Options:
+
+BEGINNER
+“I’m new to the gym or still learning the basics.”
+
+INTERMEDIATE
+“I know the basic exercises and train consistently.”
+
+ADVANCED
+“I have substantial training experience.”
+
+Use the existing Beginner / Intermediate / Advanced system rather than creating a duplicate.
+
+==================================================
+STEP 2 — DAYS PER WEEK
+======================
+
+Ask:
+
+HOW MANY DAYS CAN YOU TRAIN?
+
+Options:
+
+2 DAYS
+3 DAYS
+4 DAYS
+5 DAYS
+6 DAYS
+
+The system must NOT assume that more training days are automatically better.
+
+The plan should adapt intelligently to the selected frequency.
+
+==================================================
+STEP 3 — GOAL
+=============
+
+Ask:
+
+WHAT'S YOUR MAIN GOAL?
+
+Options:
+
+BUILD MUSCLE
+GET STRONGER
+LOSE FAT
+GENERAL FITNESS
+BUILD ENDURANCE
+
+The selected goal must actually influence the workout structure and exercise selection.
+
+==================================================
+STEP 4 — GENERATE MY WEEK
+=========================
+
+After the user selects:
+
+LEVEL
++
+TRAINING DAYS
++
+GOAL
+
+show:
+
+[GENERATE MY WEEK]
+
+Generate a complete weekly schedule.
+
+Example:
+
+BEGINNER
+3 DAYS
+GENERAL FITNESS
+
+YOUR WEEK
+
+MONDAY
+FULL BODY A
+6 exercises
+~45 min
+[START WORKOUT]
+
+TUESDAY
+REST / RECOVERY
+
+WEDNESDAY
+FULL BODY B
+6 exercises
+~45 min
+[START WORKOUT]
+
+THURSDAY
+REST
+
+FRIDAY
+FULL BODY A
+6 exercises
+~45 min
+[START WORKOUT]
+
+SATURDAY
+OPTIONAL WALK / MOBILITY
+
+SUNDAY
+REST
+
+==================================================
+PROGRAMMING LOGIC
+=================
+
+Do NOT hard-code the same split for every user.
+
+The split should depend on:
+
+• Training level
+• Number of training days
+• Goal
+
+For example:
+
+BEGINNER — 2 DAYS
+Full Body A
+Full Body B
+
+BEGINNER — 3 DAYS
+Full Body A
+Full Body B
+Full Body A/B rotation
+
+INTERMEDIATE — 4 DAYS
+Upper A
+Lower A
+Rest
+Upper B
+Lower B
+
+ADVANCED — 5/6 DAYS
+Push / Pull / Legs or another appropriate advanced structure.
+
+The exact split can adapt to the user's goal.
+
+Do not simply create:
+
+Monday = Chest
+Tuesday = Back
+Wednesday = Shoulders
+Thursday = Legs
+
+for everyone.
+
+The system should consider weekly training frequency and recovery.
+
+==================================================
+BEGINNER PROGRAMMING
+====================
+
+Beginners should primarily learn:
+
+• Basic movement patterns
+• Machine setup
+• Correct technique
+• Basic dumbbell movements
+• Appropriate training volume
+• Recovery
+
+Example:
+
+FULL BODY A
+
+Treadmill warm-up
+Leg Press
+Chest Press
+Lat Pulldown
+Seated Cable Row
+Leg Curl
+Core
+Cooldown
+
+FULL BODY B
+
+Treadmill warm-up
+Goblet Squat
+Shoulder Press
+Seated Cable Row
+Leg Extension
+Chest Press
+Core
+Cooldown
+
+Keep beginner programming simple and approachable.
+
+==================================================
+INTERMEDIATE PROGRAMMING
+========================
+
+Introduce more structured training:
+
+• Upper / Lower
+• Push / Pull / Legs
+• Compound movements
+• Machines
+• Cables
+• Dumbbells
+• Progressive overload
+
+Use appropriate volume and recovery.
+
+==================================================
+ADVANCED PROGRAMMING
+====================
+
+Allow more advanced structures:
+
+• Push / Pull / Legs
+• Higher training volume
+• Compound movements
+• Isolation work
+• Advanced machine variations
+• Progressive overload
+• Advanced exercise variations
+
+Advanced techniques such as:
+
+• Supersets
+• Drop sets
+• Rest-pause
+• Paused reps
+• Tempo work
+
+can be used selectively.
+
+Do NOT add advanced intensity techniques everywhere.
+
+==================================================
+GOAL-BASED PROGRAMMING
+======================
+
+The selected goal must affect the generated plan.
+
+BUILD MUSCLE
+→ prioritize resistance training and appropriate hypertrophy volume.
+
+GET STRONGER
+→ prioritize major compound movements and appropriate rest/loading.
+
+LOSE FAT
+→ combine resistance training with appropriate conditioning/cardio.
+
+GENERAL FITNESS
+→ balanced strength, cardio, mobility and recovery.
+
+BUILD ENDURANCE
+→ emphasize appropriate conditioning while maintaining resistance training.
+
+Do not make unrealistic weight-loss promises.
+
+==================================================
+DAILY WORKOUT EXPERIENCE
+========================
+
+When the user clicks:
+
+[START WORKOUT]
+
+open a guided workout screen.
+
+Example:
+
+MONDAY
+FULL BODY A
+
+PRE-GYM
+5–10 MIN
+
+[▶ WATCH WARM-UP]
+
+---
+
+01
+LEG PRESS
+
+2 × 10
+REST 90 SEC
+
+[▶ WATCH 10-SECOND DEMO]
+
+---
+
+02
+CHEST PRESS
+
+2 × 10
+REST 90 SEC
+
+[▶ WATCH 10-SECOND DEMO]
+
+---
+
+03
+LAT PULLDOWN
+
+2 × 10
+REST 90 SEC
+
+[▶ WATCH 10-SECOND DEMO]
+
+---
+
+Continue...
+
+---
+
+POST-WORKOUT
+
+Cooldown
+Stretching
+Recovery
+
+[COMPLETE WORKOUT]
+
+==================================================
+10-SECOND EXERCISE VIDEOS
+=========================
+
+The existing short exercise-video system should be integrated directly into every generated workout.
+
+Every exercise should have:
+
+[▶ WATCH 10-SEC DEMO]
+
+Target duration:
+8–12 seconds.
+
+Default:
+10 seconds.
+
+The demonstration should show:
+
+0–2 sec
+SETUP
+
+2–8 sec
+CORRECT MOVEMENT
+
+8–10 sec
+KEY FORM CUE
+
+Do not autoplay videos.
+
+Lazy-load them.
+
+The user should not have to leave the workout to find the demonstration.
+
+==================================================
+PRE-GYM
+=======
+
+Every workout should begin with a suitable warm-up.
+
+Include:
+
+• Easy cardio
+• Dynamic mobility
+• Movement preparation
+• Exercise-specific warm-up where appropriate
+
+Use the existing short video system for warm-up demonstrations.
+
+==================================================
+POST-GYM
+========
+
+Every workout should finish with:
+
+• Cooldown
+• Breathing
+• Appropriate stretching
+• Hydration
+• Recovery guidance
+
+Use short demonstration videos for stretches where appropriate.
+
+==================================================
+REST DAYS
+=========
+
+Rest days must be part of the weekly plan.
+
+Display:
+
+REST / RECOVERY
+
+Suggested:
+
+• Walking
+• Mobility
+• Light stretching
+• Recovery
+
+Do not turn every day into a hard workout.
+
+==================================================
+WEEKLY PROGRESSION
+==================
+
+The system should support progression across weeks.
+
+Example:
+
+WEEK 1
+Learn technique
+
+WEEK 2
+Improve consistency
+
+WEEK 3
+Progress gradually
+
+WEEK 4
+Continue progression where appropriate
+
+Progression may involve:
+
+• Reps
+• Weight
+• Sets
+• Training volume
+
+Do not automatically increase weight every session.
+
+==================================================
+WORKOUT DURATION
+================
+
+Support:
+
+20 MIN
+30 MIN
+45 MIN
+60 MIN
+75 MIN
+90 MIN
+
+The displayed duration should be calculated from:
+
+• Exercises
+• Sets
+• Rest
+• Warm-up
+• Cooldown
+
+==================================================
+REST TIMER
+==========
+
+Inside the workout, provide an optional rest timer.
+
+Example:
+
+REST
+01:30
+
+[START TIMER]
+
+Presets:
+
+30 sec
+60 sec
+90 sec
+120 sec
+Custom
+
+Use sensible defaults based on the exercise and training goal.
+
+==================================================
+TODAY'S WORKOUT
+===============
+
+The main dashboard/homepage should show the user's current workout.
+
+Example:
+
+TODAY
+
+MONDAY
+
+FULL BODY A
+
+6 exercises
+~45 minutes
+
+[START TODAY'S WORKOUT]
+
+If today is a rest day:
+
+TODAY IS A RECOVERY DAY
+
+10–20 min walk
+Light mobility
+
+==================================================
+EDIT / REGENERATE
+=================
+
+After generating the weekly plan, provide:
+
+[EDIT PLAN]
+
+Allow changing:
+
+• Level
+• Days per week
+• Goal
+• Workout duration
+
+Also provide:
+
+[REGENERATE PLAN]
+
+Regeneration should preserve the selected level, frequency and goal while creating an appropriate variation.
+
+==================================================
+MOBILE UX
+=========
+
+This entire experience must work exceptionally well on mobile.
+
+During a workout:
+
+EXERCISE 3 OF 6
+
+LAT PULLDOWN
+
+2 × 10
+
+[▶ WATCH DEMO]
+
+[START SET]
+
+[REST TIMER]
+
+NEXT EXERCISE →
+
+Use large touch targets and clear typography.
+
+==================================================
+IMPORTANT EXISTING FEATURES
+===========================
+
+Preserve and connect the existing:
+
+• Equipment Library
+• Exercise Library
+• Equipment videos
+• Beginner / Intermediate / Advanced
+• Goal-based training
+• Search
+• Filters
+• Workout Builder
+• Pre-gym
+• Post-gym
+• Gym floor map
+• FAQ
+• Responsive/mobile UI
+
+Do not duplicate functionality unnecessarily.
+
+“BUILD MY WEEK” should become the system that connects these existing features.
+
+For example:
+
+Equipment Library
+↓
+Exercise Library
+↓
+Exercise Videos
+↓
+Workout Builder
+↓
+BUILD MY WEEK
+↓
+TODAY'S WORKOUT
+
+==================================================
+IMPORTANT UX PRINCIPLE
+======================
+
+Do not make this feel like a database of exercises.
+
+It should feel like:
+
+“MY WEEKLY TRAINING PLAN”
+
+The user should always know:
+
+WHAT AM I DOING TODAY?
+WHAT EXERCISE IS NEXT?
+HOW MANY SETS?
+HOW MANY REPS?
+HOW LONG DO I REST?
+HOW DO I PERFORM IT?
+WHAT DO I DO AFTERWARD?
+
+==================================================
+BEFORE IMPLEMENTING
+===================
+
+First inspect the existing codebase carefully.
+
+Identify:
+
+• Existing components
+• Routing
+• Data structures
+• Workout logic
+• Equipment/exercise data
+• Video implementation
+• State management
+• Styling system
+• Responsive behavior
+
+Then propose the cleanest implementation approach.
+
+Avoid unnecessary rewrites.
+
+Reuse existing components and data wherever possible.
+
+After understanding the architecture, implement the feature cleanly and maintainably.
+
+Do not break existing functionality.
+
+The final result should make the website feel like a real personalized gym-training platform rather than a static fitness guide.

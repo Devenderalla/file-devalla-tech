@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Tracker — a financial diary for every Indian household</title>
+<style>
+  @font-face { font-family: "Bricolage Grotesque"; src: url("../fonts/bricolage.woff2") format("woff2"); font-weight: 400 800; font-display: swap; }
+  @font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+  @font-face { font-family: "Spline Sans Mono"; src: url("../fonts/spline-mono.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+  :root {
+    --paper: #f2f4ef; --card: #fcfcfb; --ink: #14352a; --ink-2: #55685e; --ink-3: #8b988f;
+    --hairline: #dde3da; --hairline-2: #e8ece5; --good: #006300;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Instrument Sans", system-ui, sans-serif; font-size: 15px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 860px; margin: 0 auto; padding: 44px 28px 60px; }
+
+  .masthead { display: flex; align-items: center; gap: 12px; }
+  .masthead h1 { font-family: "Bricolage Grotesque", Georgia, serif; font-weight: 800; font-size: 26px; letter-spacing: -0.01em; }
+  .tagline { margin-top: 14px; font-family: "Bricolage Grotesque", Georgia, serif; font-weight: 700; font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; letter-spacing: -0.015em; max-width: 21ch; }
+
+  .numbers { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .num {
+    flex: 1; min-width: 160px; background: var(--card); border: 1px solid var(--hairline); border-radius: 12px;
+    padding: 14px 18px;
+  }
+  .num b { display: block; font-family: "Spline Sans Mono", monospace; font-size: 19px; font-weight: 600; }
+  .num span { font-size: 12.5px; color: var(--ink-2); }
+
+  .cols { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 34px; margin-top: 34px; align-items: start; }
+  h2 {
+    font-family: "Spline Sans Mono", monospace; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 10px;
+  }
+  .prose p { margin-bottom: 12px; }
+  .prose + h2 { margin-top: 26px; }
+  ul.feat { list-style: none; }
+  ul.feat li { padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid var(--hairline-2); }
+  ul.feat li::before { content: "◆"; position: absolute; left: 4px; color: var(--ink-3); font-size: 9px; top: 12px; }
+  ul.feat b { font-weight: 600; }
+
+  .demo {
+    background: var(--card); border: 1px solid var(--hairline); border-radius: 14px;
+    padding: 22px; text-align: center; position: relative;
+  }
+  .demo::after { content: ""; position: absolute; inset: 6px; border: 1px solid var(--hairline-2); border-radius: 9px; pointer-events: none; }
+  .demo img.qr { width: 168px; height: 168px; display: block; margin: 8px auto 0; }
+  .demo .url { font-family: "Spline Sans Mono", monospace; font-size: 12.5px; margin-top: 12px; word-break: break-all; }
+  .demo .how { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+  .demo .how b { color: var(--ink); }
+  .phone { margin-top: 22px; text-align: center; }
+  .phone img {
+    width: 100%; max-width: 250px; border-radius: 22px; border: 1px solid var(--hairline);
+    box-shadow: 0 14px 34px rgba(20, 53, 42, 0.14);
+  }
+  .phone figcaption { font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+
+  .foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
+
+  @media (max-width: 700px) { .cols { grid-template-columns: 1fr; } }
+  @media print {
+    body { background: #fff; }
+    .page { padding: 0; max-width: none; }
+    .phone img { box-shadow: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <svg width="30" height="30" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="24" height="24" rx="6" stroke="#14352a" stroke-width="1.6"/>
+      <rect x="4.5" y="4.5" width="17" height="17" rx="3.5" stroke="#14352a" stroke-width="0.8" opacity="0.45"/>
+      <path d="M8.5 9h9M8.5 13h9M8.5 17h5.5" stroke="#14352a" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <h1>Budget Tracker</h1>
+  </header>
+
+  <p class="tagline">A financial diary for every Indian household.</p>
+
+  <div class="numbers">
+    <div class="num"><b>Fully offline</b><span>works with no internet, no signal</span></div>
+    <div class="num"><b>Under 300 KB</b><span>runs on any smartphone, even entry-level</span></div>
+    <div class="num"><b>Zero data collected</b><span>nothing ever leaves the phone</span></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>The problem</h2>
+      <div class="prose">
+        <p>Most Indian households never see where the month's money went. The popular finance apps that promise to help are 50+&nbsp;MB downloads that demand constant internet, push ads and instant loans, and quietly ship personal financial data to third-party servers.</p>
+        <p>Budgeting is a habit. A habit tool must be instant, private, and work everywhere — including where the network doesn't.</p>
+      </div>
+      <h2>What it does</h2>
+      <ul class="feat">
+        <li><b>Log an expense in seconds</b> — amount, category, paid via Cash / UPI / Card</li>
+        <li><b>Categories for Indian life</b> — Kirana, Petrol, EMI, Bills, Family, Haircut</li>
+        <li><b>Monthly budgets</b> per category, with clear over-spend warnings</li>
+        <li><b>Gullak</b> — savings goals: "₹5,000 by Diwali", watch it fill</li>
+        <li><b>Trends</b> — day-by-day spending, six-month view, month-vs-month</li>
+        <li><b>Income &amp; balance</b>, recurring entries, search, dark mode</li>
+        <li><b>Your data is yours</b> — stored on the device, exportable anytime, open source</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="demo">
+        <h2>Try it in 10 seconds</h2>
+        <img class="qr" src="qr.svg" alt="QR code linking to the Budget Tracker app">
+        <div class="url">file.devalla.tech/budget/</div>
+        <p class="how">Scan → open → <b>Add to Home Screen</b>.<br>Then switch on airplane mode — <b>it still works</b>.</p>
+      </div>
+      <figure class="phone">
+        <img src="app-phone.png" alt="Budget Tracker running on a phone: month total, day-by-day trends and category breakdown">
+        <figcaption>Running on a phone — no app store needed.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>github.com/Devenderalla/budget-tracker</span>
+    <span>Free &amp; open source · no ads, no loans, no tracking</span>
+  </footer>
+</div>
+</body>
+</html>

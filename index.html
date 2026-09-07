@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>file.devalla.tech</title>
+<style>
+  :root{
+    --bg:#fbfbfa; --fg:#1b1b19; --muted:#6b6b66; --line:#e4e3df;
+    --card:#fff; --accent:#2f5d50; --off:#8a8a84;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+    --bg:#131311; --fg:#eceae4; --muted:#9b9b94; --line:#2b2b28;
+    --card:#1b1b18; --accent:#7fbfa9; --off:#6f6f69;
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:0 auto;padding:clamp(2rem,7vw,5rem) 1.25rem 4rem}
+  h1{font-size:clamp(1.5rem,4.5vw,2rem);letter-spacing:-.02em;margin:0 0 .35rem}
+  .sub{color:var(--muted);margin:0 0 2.5rem;font-size:.95rem}
+  h2{font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;
+     color:var(--muted);margin:2.5rem 0 .85rem;font-weight:600}
+  ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+  li a,li div{display:block;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;padding:.9rem 1.05rem;text-decoration:none;color:inherit}
+  li a{transition:border-color .15s,transform .15s}
+  li a:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .name{font-weight:600;letter-spacing:-.01em}
+  .desc{color:var(--muted);font-size:.875rem;margin-top:.15rem}
+  .off .name{color:var(--off)}
+  .off{opacity:.75}
+  .tag{float:right;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;
+       color:var(--off);border:1px solid var(--line);border-radius:99px;
+       padding:.1rem .5rem;margin-left:.5rem}
+  footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--line);
+         color:var(--muted);font-size:.83rem}
+  a.plain{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>file.devalla.tech</h1>
+  <p class="sub">The server that used to host this was retired. The static apps
+  below still run entirely in your browser; the rest needed a machine behind
+  them and are no longer online.</p>
+
+  <h2>Still running</h2>
+  <ul>
+    <li><a href="./budget/">
+      <span class="name">Budget Tracker</span>
+      <div class="desc">Offline-first PWA. Installs to the home screen; data stays on your device.</div>
+    </a></li>
+    <li><a href="./gym/">
+      <span class="name">Gym Basics</span>
+      <div class="desc">Beginner and advanced routines, with a workout builder.</div>
+    </a></li>
+  </ul>
+
+  <h2>Retired with the server</h2>
+  <ul>
+    <li class="off"><div>
+      <span class="name">Invoice queue<span class="tag">needs a backend</span></span>
+      <div class="desc">Read invoice photos, checked the arithmetic and wrote sales
+      orders into Focus X. It ran extraction and a browser session per invoice, so
+      there is no static form of it.</div>
+    </div></li>
+    <li class="off"><div>
+      <span class="name">CareSynq<span class="tag">private</span></span>
+      <div class="desc">Healthcare prototype. Kept off the public web.</div>
+    </div></li>
+    <li class="off"><div>
+      <span class="name">Job board<span class="tag">private</span></span>
+      <div class="desc">Personal application pipeline. Kept off the public web.</div>
+    </div></li>
+  </ul>
+
+  <footer>
+    Source for everything here is at
+    <a class="plain" href="https://github.com/Devenderalla">github.com/Devenderalla</a>.
+    Served as a static site, so it costs nothing to keep up.
+  </footer>
+</div>
+</body>
+</html>

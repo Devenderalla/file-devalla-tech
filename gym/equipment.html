@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipment library — Gym Basics</title>
+<meta name="description" content="All 30 gym stations photographed and explained — what each one does, the muscles it works, how to use it, and where to start at every level.">
+<link rel="canonical" href="https://file.devalla.tech/gym/equipment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gym Basics">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Gym equipment library — 30 stations explained">
+<meta property="og:description" content="Every station: what it does, how to set it up, what to do at each level, and the mistake to avoid.">
+<meta property="og:url" content="https://file.devalla.tech/gym/equipment.html">
+<meta property="og:image" content="https://file.devalla.tech/gym/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An overhead map of a gym floor divided into three zones: cardio, machines, and free weights.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gym equipment library — 30 stations explained">
+<meta name="twitter:description" content="Every station: what it does, how to set it up, what to do at each level, and the mistake to avoid.">
+<meta name="theme-color" content="#0F1319">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<!-- The above-the-fold faces, preloaded so they arrive before first paint.
+     Paired with font-display: optional in styles.css, that removes the
+     late swap that was reflowing the hero. -->
+<link rel="preload" href="fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#library">Skip to the library</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="23" height="23" rx="5" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 13h12M9.5 9.5v7M16.5 9.5v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Gym Basics</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="head-nav" aria-label="Site">
+      <a href="programs.html">Programs</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="guide.html">First day</a>
+    </nav>
+    <a class="btn btn-light btn-sm head-cta" href="week.html">My week</a>
+  </div>
+</header>
+
+<div class="page-head on-dark">
+  <div class="wrap">
+    <span class="eyebrow">The floor, station by station</span>
+    <h1 class="h-sec">Equipment library</h1>
+    <p class="lede">Thirty stations across four zones. Each card: what it does, the muscles it works, how to use it, level-by-level starting points, and the one mistake to avoid.</p>
+  </div>
+</div>
+
+<main id="library">
+  <section class="section">
+    <div class="wrap">
+      <div class="toolbar">
+        <label class="search">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="eqSearch" placeholder="Search equipment — “press”, “rower”, “rack”…" aria-label="Search equipment">
+        </label>
+        <div class="chip-row" role="group" aria-label="Filter by zone">
+          <span class="chip-label">Zone</span>
+          <button class="chip" type="button" data-eq-cat="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-eq-cat="cardio" aria-pressed="false">Cardio</button>
+          <button class="chip" type="button" data-eq-cat="machines" aria-pressed="false">Machines</button>
+          <button class="chip" type="button" data-eq-cat="free" aria-pressed="false">Free weights</button>
+          <button class="chip" type="button" data-eq-cat="functional" aria-pressed="false">Functional</button>
+        </div>
+        <div class="chip-row" role="group" aria-label="Filter by muscle">
+          <span class="chip-label">Muscle</span>
+          <button class="chip" type="button" data-eq-muscle="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-eq-muscle="chest" aria-pressed="false">Chest</button>
+          <button class="chip" type="button" data-eq-muscle="back" aria-pressed="false">Back</button>
+          <button class="chip" type="button" data-eq-muscle="shoulders" aria-pressed="false">Shoulders</button>
+          <button class="chip" type="button" data-eq-muscle="arms" aria-pressed="false">Arms</button>
+          <button class="chip" type="button" data-eq-muscle="legs" aria-pressed="false">Legs</button>
+          <button class="chip" type="button" data-eq-muscle="glutes" aria-pressed="false">Glutes</button>
+          <button class="chip" type="button" data-eq-muscle="core" aria-pressed="false">Core</button>
+          <button class="chip" type="button" data-eq-muscle="full" aria-pressed="false">Full body</button>
+        </div>
+        <span class="count-note" id="eqCount" aria-live="polite"></span>
+      </div>
+
+      <div class="lib-grid" id="eqGrid"></div>
+      <noscript>
+        <div class="empty-note"><b>The interactive library needs JavaScript.</b><br>
+        Without it, the <a href="guide.html">first-day guide</a> still covers the twelve most important machines in full.</div>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section-dark on-dark">
+    <div class="wrap">
+      <div class="sec-head-row">
+        <div>
+          <span class="eyebrow">New to all of this?</span>
+          <h2 class="h-sec">Start with the twelve</h2>
+          <p class="sec-lede">The first-day guide walks the floor in order — the twelve machines a beginner actually uses, with the floor map to find them.</p>
+        </div>
+        <a class="btn btn-light btn-lg" href="guide.html">First-day guide</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="week.html">My week</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="programs.html">Programs</a>
+      <a href="exercises.html">Exercise library</a>
+      <a href="beginner.html">Beginner</a>
+      <a href="intermediate.html">Intermediate</a>
+      <a href="advanced.html">Advanced</a>
+      <a href="builder.html">Workout builder</a>
+      <a href="guide.html">First-day guide</a>
+    </nav>
+    <p class="foot-honest">No ads. Nothing for sale. No account, no tracking.</p>
+    <p class="disclaimer">
+      <strong>Please read:</strong> This website provides general fitness education and is not medical
+      advice. It has not been reviewed by a doctor or a qualified trainer. If you have an injury or a
+      health condition, are pregnant, or your doctor has advised you about exercise, speak to them
+      before you start.
+    </p>
+    <p class="foot-credit">Photography from <a href="https://www.pexels.com" rel="external">Pexels</a>, free to use under the Pexels license.</p>
+    <p class="foot-legal">© 2026 Gym Basics. Free to share.</p>
+  </div>
+</footer>
+
+<script src="data.js" defer></script>
+<script src="plan.js" defer></script>
+<script src="app.js" defer></script>
+<script src="session.js" defer></script>
+<script src="lift.js" defer></script>
+<script src="plates.js" defer></script>
+<script src="demo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Basics — know your gym, train with purpose</title>
+<meta name="description" content="Understand every machine, follow structured sessions for beginner, intermediate and advanced training, and build your own workout. Free, no signup.">
+<meta name="keywords" content="gym for beginners, gym equipment guide, workout builder, beginner workout, intermediate workout, advanced training">
+<link rel="canonical" href="https://file.devalla.tech/gym/">
+<meta name="theme-color" content="#0F1319">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gym Basics">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Gym Basics — know your gym, train with purpose">
+<meta property="og:description" content="From your first workout to advanced training — understand the equipment, follow structured sessions, and train with confidence.">
+<meta property="og:url" content="https://file.devalla.tech/gym/">
+<meta property="og:image" content="https://file.devalla.tech/gym/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An overhead map of a gym floor divided into three zones: cardio, machines, and free weights.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gym Basics — know your gym, train with purpose">
+<meta name="twitter:description" content="Understand the equipment, follow structured sessions, and train with confidence. Free, no signup.">
+<meta name="twitter:image" content="https://file.devalla.tech/gym/assets/og.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<!-- The above-the-fold faces, preloaded so they arrive before first paint.
+     Paired with font-display: optional in styles.css, that removes the
+     late swap that was reflowing the hero. -->
+<link rel="preload" href="fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#levels">Skip to training levels</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="23" height="23" rx="5" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 13h12M9.5 9.5v7M16.5 9.5v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Gym Basics</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="head-nav" aria-label="Site">
+      <a href="programs.html">Programs</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="guide.html">First day</a>
+    </nav>
+    <a class="btn btn-light btn-sm head-cta" href="week.html">My week</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══ hero ═══ -->
+  <section class="hero-photo on-dark">
+    <img src="img/hero.webp" alt="" fetchpriority="high">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Free · No signup · No ads</span>
+      <h1 class="d1">Know your gym.<br>Train with purpose.</h1>
+      <p class="lede">From your first workout to advanced training — understand the equipment, follow structured sessions, and train with confidence.</p>
+      <div class="hero-cta">
+        <a class="btn btn-light btn-lg" href="week.html">Build my week</a>
+        <a class="btn btn-ghost btn-lg" href="equipment.html">Explore equipment</a>
+      </div>
+      <p class="risk">Built for people who've never trained — and the people who train daily.</p>
+    </div>
+  </section>
+
+  <!-- ═══ today ═══ -->
+  <section class="section today-band" id="todayCard" hidden aria-live="polite"></section>
+  <section class="section today-band" id="fuelCard" hidden aria-live="polite"></section>
+
+  <!-- ═══ level selector ═══ -->
+  <section class="section section-dark on-dark" id="levels">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="eyebrow">Step 01 · Pick your starting point</span>
+        <h2 class="h-sec">What's your training level?</h2>
+        <p class="sec-lede">The three levels are genuinely different — different exercises, different volume, different depth. Start where you actually are; the site grows with you. <a href="programs.html">See all programs →</a></p>
+      </header>
+      <div class="grid-3">
+        <a class="level-card lc-beg reveal" href="beginner.html">
+          <div class="ph ph-3x2"><img loading="lazy" src="img/level-beginner.webp" alt="Two people walking on treadmills in a bright gym" data-name="Beginner"></div>
+          <div class="lc-body">
+            <span class="tag tag-beg">Beginner</span>
+            <h3 class="h-card">"I'm new to the gym"</h3>
+            <p class="lc-quote">Never trained, or starting again after a long break.</p>
+            <p class="lc-focus"><b>Focus:</b> learn the machines, learn the movements, leave feeling capable — not destroyed.</p>
+            <span class="lc-cta">Start beginner plan</span>
+          </div>
+        </a>
+        <a class="level-card lc-int reveal" href="intermediate.html">
+          <div class="ph ph-3x2"><img loading="lazy" src="img/level-intermediate.webp" alt="A man pressing dumbbells on a flat bench" data-name="Intermediate"></div>
+          <div class="lc-body">
+            <span class="tag tag-int">Intermediate</span>
+            <h3 class="h-card">"I know the basics"</h3>
+            <p class="lc-quote">Comfortable on the floor, ready for structured splits.</p>
+            <p class="lc-focus"><b>Focus:</b> push, pull, legs — free weights, progressive overload, real programming.</p>
+            <span class="lc-cta">Start intermediate plan</span>
+          </div>
+        </a>
+        <a class="level-card lc-adv reveal" href="advanced.html">
+          <div class="ph ph-3x2"><img loading="lazy" src="img/level-advanced.webp" alt="An athlete setting up to deadlift a loaded barbell" data-name="Advanced"></div>
+          <div class="lc-body">
+            <span class="tag tag-adv">Advanced</span>
+            <h3 class="h-card">"I train consistently"</h3>
+            <p class="lc-quote">Years under the bar, chasing the next level.</p>
+            <p class="lc-focus"><b>Focus:</b> heavy compounds, intensity techniques, and volume that has to be earned.</p>
+            <span class="lc-cta">Start advanced plan</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ goals ═══ -->
+  <section class="section" id="goals">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="eyebrow">Step 02 · Pick a direction</span>
+        <h2 class="h-sec">What's your goal?</h2>
+        <p class="sec-lede">Your goal changes the reps, the rest and the finishers — not the fundamentals. Pick one and the workout builder shapes the session around it.</p>
+      </header>
+      <div class="grid-goals">
+        <a class="goal-card reveal" href="builder.html?goal=muscle">
+          <h3 class="h-card">Build muscle</h3>
+          <p>Moderate weights, 8–12 reps, and patience. Machines and free weights both build muscle — tension is tension.</p>
+          <span class="mono-note">8–12 reps · rest 60–90s</span>
+        </a>
+        <a class="goal-card reveal" href="builder.html?goal=strength">
+          <h3 class="h-card">Get stronger</h3>
+          <p>Heavier weights, fewer reps, longer rests, and the patience to add small plates for months.</p>
+          <span class="mono-note">5–8 reps · rest 3+ min</span>
+        </a>
+        <a class="goal-card reveal" href="builder.html?goal=fatloss">
+          <h3 class="h-card">Lose fat</h3>
+          <p>Lift to keep muscle, add conditioning to spend energy, and let the kitchen do the heavy lifting. No 30-day miracles here.</p>
+          <span class="mono-note">12–15 reps · short rests · conditioning</span>
+        </a>
+        <a class="goal-card reveal" href="builder.html?goal=fitness">
+          <h3 class="h-card">Improve fitness</h3>
+          <p>A balanced mix — strength for the frame, cardio for the engine, twice or three times a week, forever.</p>
+          <span class="mono-note">Balanced strength + cardio</span>
+        </a>
+        <a class="goal-card reveal" href="builder.html?goal=endurance">
+          <h3 class="h-card">Build endurance</h3>
+          <p>Rowers, bikes, climbers and higher-rep strength work — building an engine that doesn't quit.</p>
+          <span class="mono-note">Intervals · 12–15 reps</span>
+        </a>
+        <a class="goal-card reveal" href="guide.html">
+          <h3 class="h-card">Not sure yet?</h3>
+          <p>Completely normal. Read the first-day guide, do the first 30-minute session, and the goal will find you.</p>
+          <span class="mono-note">Start with the first-day guide →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ equipment showcase ═══ -->
+  <section class="section section-alt" id="equipment">
+    <div class="wrap">
+      <header class="sec-head sec-head-row">
+        <div>
+          <span class="eyebrow">The floor, explained</span>
+          <h2 class="h-sec">Explore modern equipment</h2>
+          <p class="sec-lede">Every station photographed and explained: what it does, the muscles it works, how to use it, and where to start at every level.</p>
+        </div>
+        <a class="btn btn-primary" href="equipment.html">Full equipment library</a>
+      </header>
+      <div class="lib-grid" id="homeEquip"></div>
+      <noscript><p style="margin-top:16px"><a href="equipment.html">Open the full equipment library →</a></p></noscript>
+    </div>
+  </section>
+
+  <!-- ═══ how a session works ═══ -->
+  <section class="section section-dark on-dark" id="session">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="eyebrow">The shape of every good workout</span>
+        <h2 class="h-sec">How a session works</h2>
+        <p class="sec-lede">Every program on this site — beginner to advanced — follows the same six-phase spine. Learn it once and no workout will ever feel improvised again.</p>
+      </header>
+      <div class="spine">
+        <div class="spine-step reveal">
+          <span class="spine-num">01</span>
+          <div class="spine-body">
+            <h3>Pre-gym</h3>
+            <p>Eat something light 1–2 hours out, arrive hydrated, know today's plan before you walk in.</p>
+            <span class="mono">Before you leave home</span>
+          </div>
+        </div>
+        <div class="spine-step reveal">
+          <span class="spine-num">02</span>
+          <div class="spine-body">
+            <h3>Warm-up</h3>
+            <p>Five to ten minutes of easy cardio and mobility, ending with a light practice set of your first exercise.</p>
+            <span class="mono">5–10 min</span>
+          </div>
+        </div>
+        <div class="spine-step reveal">
+          <span class="spine-num">03</span>
+          <div class="spine-body">
+            <h3>Main workout</h3>
+            <p>The big movements, while you're freshest — presses, pulls, squats and hinges at your level.</p>
+            <span class="mono">15–40 min</span>
+          </div>
+        </div>
+        <div class="spine-step reveal">
+          <span class="spine-num">04</span>
+          <div class="spine-body">
+            <h3>Accessory + core</h3>
+            <p>Smaller, targeted work that supports the big lifts, finished with direct core training.</p>
+            <span class="mono">10–20 min</span>
+          </div>
+        </div>
+        <div class="spine-step reveal">
+          <span class="spine-num">05</span>
+          <div class="spine-body">
+            <h3>Cool-down</h3>
+            <p>Easy movement until your breathing settles, then gentle stretching for what you trained.</p>
+            <span class="mono">5 min</span>
+          </div>
+        </div>
+        <div class="spine-step reveal">
+          <span class="spine-num">06</span>
+          <div class="spine-body">
+            <h3>Recovery</h3>
+            <p>Water, a proper meal with protein, and sleep — where the actual progress happens.</p>
+            <span class="mono">The other 23 hours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ featured workouts ═══ -->
+  <section class="section" id="workouts">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="eyebrow">Complete guided sessions</span>
+        <h2 class="h-sec">Featured workouts</h2>
+        <p class="sec-lede">Three full sessions, each built on the six-phase spine — from a first-ever workout to an advanced lower-body day.</p>
+      </header>
+      <div class="grid-3">
+        <div class="split-card reveal">
+          <header><h3>First full-body session</h3><span class="mono">Beginner · ~40 min</span></header>
+          <ul>
+            <li>Treadmill walk (warm-up) <span class="mono">5 min</span></li>
+            <li>Leg press <span class="mono">2 × 8–10</span></li>
+            <li>Chest press <span class="mono">2 × 8–10</span></li>
+            <li>Lat pulldown <span class="mono">2 × 8–10</span></li>
+            <li>Seated row <span class="mono">2 × 8–10</span></li>
+            <li>Plank <span class="mono">2 × 20–30s</span></li>
+            <li><a href="beginner.html">Full guided session →</a></li>
+          </ul>
+        </div>
+        <div class="split-card reveal">
+          <header><h3>Push day</h3><span class="mono">Intermediate · ~60 min</span></header>
+          <ul>
+            <li>Dumbbell bench press <span class="mono">3 × 8–12</span></li>
+            <li>Incline dumbbell press <span class="mono">3 × 8–12</span></li>
+            <li>Machine shoulder press <span class="mono">3 × 8–12</span></li>
+            <li>Cable fly <span class="mono">3 × 10–15</span></li>
+            <li>Lateral raise <span class="mono">3 × 12–15</span></li>
+            <li>Triceps pushdown <span class="mono">3 × 10–15</span></li>
+            <li><a href="intermediate.html">Full guided session →</a></li>
+          </ul>
+        </div>
+        <div class="split-card reveal">
+          <header><h3>Lower body</h3><span class="mono">Advanced · ~75 min</span></header>
+          <ul>
+            <li>Barbell back squat <span class="mono">4 × 5–8</span></li>
+            <li>Romanian deadlift <span class="mono">4 × 6–10</span></li>
+            <li>Hack squat <span class="mono">3 × 8–12</span></li>
+            <li>Leg curl + extension <span class="mono">superset 3 × 12</span></li>
+            <li>Calf raise <span class="mono">4 × 8–15</span></li>
+            <li>Hanging knee raise <span class="mono">3 × 12–15</span></li>
+            <li><a href="advanced.html">Full guided session →</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ libraries ═══ -->
+  <section class="section section-alt" id="libraries">
+    <div class="wrap">
+      <div class="grid-2">
+        <a class="card-link eq-card reveal" href="equipment.html">
+          <div class="ph ph-16x9"><img loading="lazy" src="img/eq-power-rack.webp" alt="Barbells racked in a power rack" data-name="Equipment library"></div>
+          <div class="eq-body">
+            <span class="eq-cat">30 stations · 4 zones</span>
+            <h3>Equipment library</h3>
+            <p class="eq-what">Cardio, machines, free weights and functional stations — searchable, filterable by muscle, with beginner-to-advanced use for each.</p>
+          </div>
+        </a>
+        <a class="card-link eq-card reveal" href="exercises.html">
+          <div class="ph ph-16x9"><img loading="lazy" src="img/eq-dumbbells.webp" alt="A long rack of dumbbells" data-name="Exercise library"></div>
+          <div class="eq-body">
+            <span class="eq-cat">35+ exercises · Full instructions</span>
+            <h3>Exercise library</h3>
+            <p class="eq-what">Position, movement, breathing, sets and reps, mistakes and level variations for every exercise in the programs.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ builder teaser ═══ -->
+  <section class="section section-dark on-dark" id="builder">
+    <div class="wrap">
+      <div class="sec-head-row">
+        <div>
+          <span class="eyebrow">Your gym · your time · your plan</span>
+          <h2 class="h-sec">Build your workout</h2>
+          <p class="sec-lede">Pick your level, goal, muscles and how long you've got — from 20 to 90 minutes — and get a structured session with warm-up, main work, core and cool-down.</p>
+        </div>
+        <a class="btn btn-light btn-lg" href="builder.html">Open the builder</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="section" id="faq">
+    <div class="wrap col-narrow">
+      <span class="eyebrow">Questions</span>
+      <h2 class="h-sec">Before you ask</h2>
+
+      <details class="faq" open>
+        <summary>Do I need to get fit before I join?</summary>
+        <div class="faq-a"><p>No. That's what the gym is for. The lightest plate on every machine is a legitimate starting weight, and the empty bar is a legitimate lift. There's no fitness level you have to reach before you're allowed in.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Everyone will see that I don't know what I'm doing.</summary>
+        <div class="faq-a"><p>Some of them might notice, briefly, and then go back to counting their own sets. Everyone in that room had a first day, including the person who looks most at home. The rules in <a href="guide.html#rules">How to not look lost</a> are what they know that you don't — and there are only eight of them.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Which level should I pick?</summary>
+        <div class="faq-a"><p>If you're unsure, you're a <a href="beginner.html">beginner</a> — and that's the fastest-progressing level in the gym. Pick intermediate once the basic machine exercises feel routine and you're comfortable with dumbbells. Advanced is for people already training consistently with barbells who want structured intensity, not a badge.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>What if I hurt myself?</summary>
+        <div class="faq-a"><p>The three biggest protections are all free: start on the lightest setting, use the seated machines before free weights, and stop the moment your form changes. If you have an injury, a heart condition, are pregnant, or your doctor has said anything to you about exercise, talk to them first — and ask a trainer at your gym to watch your form once, in person.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>I'm a woman and the free-weights area feels like a men's club.</summary>
+        <div class="faq-a"><p>It often looks that way, and that's a real thing to navigate rather than something to talk you out of. Two practical answers: the cardio and machine zones are a complete workout on their own, so nothing forces you into that corner on week one. And most gyms have quieter hours — mid-morning and early afternoon — where the same floor feels entirely different. Ask at the desk which hours are quietest.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>My doctor told me to start strength training. Where do I start?</summary>
+        <div class="faq-a"><p>Talk to your doctor about this site before you use it, and take their instructions over anything here. In general the seated machines are the usual starting point, because your back is supported and you can't lose your balance. Ask your gym whether they have staff experienced with medically-referred beginners — many do, and it's worth asking on the phone before you join.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Do I need a personal trainer?</summary>
+        <div class="faq-a"><p>No. But one session — just one — is the cheapest shortcut there is, because someone watching your form in person catches things no written guide can. Ask for a single introductory session rather than a package.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>How do I know how much weight to use?</summary>
+        <div class="faq-a"><p>The lightest weight that lets you do 8–10 repetitions with control. The last two should feel like work; your form shouldn't change. If you can't finish smoothly, go lighter.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>How often should I go?</summary>
+        <div class="faq-a"><p>Two or three times a week with a rest day between is the usual starting point. Turning up twice a week for a month beats a perfect plan you do once.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ═══ final CTA ═══ -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2>Your next workout<br>starts here.</h2>
+      <a class="btn btn-light btn-lg" href="builder.html">Start your workout</a>
+      <p class="risk">Free. Nothing to sign up for.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="week.html">My week</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="programs.html">Programs</a>
+      <a href="equipment.html">Equipment library</a>
+      <a href="exercises.html">Exercise library</a>
+      <a href="beginner.html">Beginner</a>
+      <a href="intermediate.html">Intermediate</a>
+      <a href="advanced.html">Advanced</a>
+      <a href="builder.html">Workout builder</a>
+      <a href="guide.html">First-day guide</a>
+    </nav>
+    <p class="foot-honest">No ads. Nothing for sale. No account, no tracking.</p>
+    <p class="disclaimer">
+      <strong>Please read:</strong> This website provides general fitness education and is not medical
+      advice. It has not been reviewed by a doctor or a qualified trainer. If you have an injury or a
+      health condition, are pregnant, or your doctor has advised you about exercise, speak to them
+      before you start. Nothing written here replaces someone experienced watching what you're actually doing.
+    </p>
+    <p class="foot-credit">Photography from <a href="https://www.pexels.com" rel="external">Pexels</a>, free to use under the Pexels license.</p>
+    <p class="foot-legal">© 2026 Gym Basics. Free to share.</p>
+  </div>
+</footer>
+
+<script src="data.js" defer></script>
+<script src="plan.js" defer></script>
+<script src="app.js" defer></script>
+<script src="week.js" defer></script>
+<script src="nutrition.js" defer></script>
+<script src="foods.js" defer></script>
+<script src="nutrition-ui.js" defer></script>
+</body>
+</html>

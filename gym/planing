@@ -1,0 +1,843 @@
+Redesign and significantly upgrade my existing “Gym Basics” website into a modern, premium, highly visual fitness training platform for BEGINNER, INTERMEDIATE, and ADVANCED gym users.
+
+IMPORTANT:
+Do not throw away the existing concept or content structure. Build on the existing website and improve it substantially.
+
+The current website is an educational gym guide that explains gym equipment, how machines work, a first 30-minute workout, gym etiquette, what to bring, and FAQs.
+
+The new version should become a complete interactive gym training experience.
+
+==================================================
+1. CORE PRODUCT VISION
+==================================================
+
+The website should answer:
+
+“What should I do when I enter the gym?”
+
+It should work for:
+
+• Beginners — people who have never trained or are completely new to gyms
+• Intermediate — people who already know the basic exercises and want structured workouts
+• Advanced — experienced gym users who want structured, challenging training sessions
+
+The website should feel like a combination of:
+
+• Premium fitness website
+• Gym equipment encyclopedia
+• Workout planner
+• Training session guide
+• Exercise library
+• Beginner-friendly fitness coach
+
+Do NOT make it look like a generic gym membership website.
+
+The primary purpose is helping users understand equipment and follow a complete gym session.
+
+==================================================
+2. VISUAL DESIGN
+==================================================
+
+Create a premium, modern, athletic visual design.
+
+Use REALISTIC, HIGH-QUALITY PHOTOGRAPHY of modern gym equipment.
+
+The equipment imagery should look current and attractive and should include modern equipment such as:
+
+• Modern treadmills
+• Curved treadmills
+• Modern stationary bikes
+• Assault bikes
+• SkiErg
+• Rowing machines
+• Ellipticals
+• Hack squat machines
+• 45-degree leg press
+• Pendulum squat
+• Smith machine
+• Cable crossover
+• Functional trainer
+• Lat pulldown
+• Seated cable row
+• Chest press
+• Incline press
+• Shoulder press
+• Pec deck
+• Leg extension
+• Leg curl
+• Hip thrust machine
+• Calf raise
+• Dumbbell racks
+• Olympic barbells
+• Power racks
+• Squat racks
+• Adjustable benches
+• Functional training equipment
+
+Images must clearly show the equipment.
+
+Avoid generic stock photos where the equipment is not visible.
+
+Use consistent photography style:
+• High resolution
+• Professional gym lighting
+• Dark/neutral premium gym environments
+• Equipment clearly visible
+• 3/4 perspective where possible
+• Clean backgrounds
+• Consistent aspect ratio
+
+The equipment images should be one of the strongest visual elements of the website.
+
+==================================================
+3. HOMEPAGE HERO
+==================================================
+
+Create a powerful hero section.
+
+Headline:
+
+“KNOW YOUR GYM.
+TRAIN WITH PURPOSE.”
+
+Supporting text:
+
+“From your first workout to advanced training — understand the equipment, follow structured sessions, and train with confidence.”
+
+Primary CTA:
+
+“START YOUR TRAINING”
+
+Secondary CTA:
+
+“EXPLORE EQUIPMENT”
+
+Use a large premium real-gym/equipment photograph.
+
+Do NOT use an overly busy hero.
+
+==================================================
+4. EXPERIENCE LEVEL SELECTOR
+==================================================
+
+Immediately after the hero, introduce:
+
+“WHAT'S YOUR TRAINING LEVEL?”
+
+Create three large visual cards:
+
+BEGINNER
+“I'm new to the gym”
+
+INTERMEDIATE
+“I know the basics”
+
+ADVANCED
+“I train consistently”
+
+Each card should have:
+• Strong equipment/gym image
+• Short description
+• Training focus
+• CTA
+
+Buttons:
+
+“START BEGINNER PLAN”
+“START INTERMEDIATE PLAN”
+“START ADVANCED PLAN”
+
+Make this one of the main navigation concepts of the website.
+
+==================================================
+5. PERSONALIZED TRAINING SESSION
+==================================================
+
+When a user selects their level, show a structured gym session.
+
+Every session should follow this structure:
+
+1. PRE-GYM / WARM-UP
+2. MAIN WORKOUT
+3. ACCESSORY WORK
+4. CORE / CONDITIONING
+5. POST-GYM / COOL-DOWN
+6. STRETCHING / RECOVERY
+
+Do not simply list exercises.
+
+Make it feel like a real guided training session.
+
+Each exercise should include:
+
+• Exercise name
+• Real exercise image/video placeholder
+• Target muscles
+• Equipment required
+• Sets
+• Reps
+• Rest time
+• Tempo when appropriate
+• Difficulty
+• Beginner/intermediate/advanced variation
+• Common mistake
+• Form cue
+
+==================================================
+6. BEGINNER PROGRAM
+==================================================
+
+Create a beginner-friendly structured session.
+
+Goal:
+Teach the user how to train safely and confidently.
+
+Example structure:
+
+PRE-GYM / WARM-UP
+5–10 minutes
+
+• Easy treadmill walking
+• Joint mobility
+• Arm circles
+• Hip mobility
+• Bodyweight movement preparation
+
+MAIN WORKOUT
+
+• Leg Press
+• Chest Press
+• Lat Pulldown
+• Seated Cable Row
+• Leg Curl
+• Light Dumbbell Shoulder Press
+
+Use manageable volume and emphasize learning technique.
+
+POST-GYM
+
+• Easy walking
+• Breathing
+• Light stretching
+• Recovery guidance
+
+Also provide:
+
+“YOUR FIRST 4 WEEKS”
+
+Week 1
+Learn equipment and movement patterns
+
+Week 2
+Improve technique
+
+Week 3
+Gradually increase training volume
+
+Week 4
+Begin progressive overload
+
+Keep this beginner-friendly and not intimidating.
+
+==================================================
+7. INTERMEDIATE PROGRAM
+==================================================
+
+Create structured intermediate training.
+
+The user should already understand basic gym movements.
+
+Include:
+
+PRE-GYM
+
+• 5–10 minute cardio
+• Dynamic mobility
+• Movement-specific warm-up
+• Light warm-up sets
+
+MAIN WORKOUT
+
+Use structured training such as:
+
+Push
+Pull
+Legs
+
+or
+
+Upper Body
+Lower Body
+
+Include:
+
+• Compound exercises
+• Machine exercises
+• Cable exercises
+• Dumbbells
+• Progressive overload
+
+Each workout must show:
+
+Sets × Reps
+Rest
+Exercise order
+Target muscle
+Difficulty
+
+POST-GYM
+
+• Low-intensity cooldown
+• Mobility
+• Stretching
+• Recovery guidance
+
+==================================================
+8. ADVANCED PROGRAM
+==================================================
+
+Create a dedicated advanced training experience.
+
+Advanced users should see:
+
+• Compound movements
+• Advanced machine variations
+• Free weights
+• Cable movements
+• Isolation exercises
+• Progressive overload
+• Training volume
+• Intensity techniques where appropriate
+
+Possible advanced techniques:
+
+• Drop sets
+• Supersets
+• Rest-pause
+• Tempo training
+• Paused reps
+• Mechanical drop sets
+
+Do NOT overuse advanced techniques.
+
+The advanced section should feel significantly more sophisticated than beginner and intermediate.
+
+==================================================
+9. PRE-GYM SECTION
+==================================================
+
+Create a dedicated:
+
+“BEFORE YOU TRAIN”
+
+section.
+
+Include:
+
+• What to eat before training
+• Hydration
+• Warm-up
+• Mobility
+• Dynamic stretching
+• Equipment preparation
+• Mental preparation
+
+Create different recommendations for:
+
+BEGINNER
+INTERMEDIATE
+ADVANCED
+
+Avoid making medical claims.
+
+Use clear language.
+
+==================================================
+10. POST-GYM SECTION
+==================================================
+
+Create:
+
+“AFTER YOUR WORKOUT”
+
+Include:
+
+• Cool-down
+• Breathing
+• Static stretching
+• Hydration
+• Recovery
+• Post-workout nutrition
+• Sleep/recovery basics
+
+Again, make recommendations level-specific.
+
+==================================================
+11. EQUIPMENT LIBRARY
+==================================================
+
+Create a large searchable equipment library.
+
+Instead of only 12 machines, expand the equipment section into categories.
+
+Categories:
+
+CARDIO
+• Treadmill
+• Curved treadmill
+• Bike
+• Assault bike
+• Elliptical
+• Rowing machine
+• Stair climber
+• SkiErg
+
+MACHINES
+• Chest press
+• Shoulder press
+• Lat pulldown
+• Seated row
+• Leg press
+• Hack squat
+• Pendulum squat
+• Leg extension
+• Leg curl
+• Pec deck
+• Hip thrust
+• Calf raise
+
+FREE WEIGHTS
+• Dumbbells
+• Barbells
+• Plates
+• Kettlebells
+• Adjustable bench
+
+FUNCTIONAL
+• Cable crossover
+• Functional trainer
+• Smith machine
+• Power rack
+• Squat rack
+
+Every equipment card should have:
+
+REAL IMAGE
+
+Equipment name
+
+“WHAT IT DOES”
+
+“PRIMARY MUSCLES”
+
+“HOW TO USE IT”
+
+“BEGINNER START”
+
+“INTERMEDIATE USE”
+
+“ADVANCED USE”
+
+“COMMON MISTAKE”
+
+==================================================
+12. EQUIPMENT SEARCH AND FILTER
+==================================================
+
+Add a prominent search bar:
+
+“Search equipment or exercise...”
+
+Allow filtering by:
+
+• Muscle
+• Equipment
+• Training level
+• Goal
+• Movement type
+
+Muscle filters:
+
+Chest
+Back
+Shoulders
+Arms
+Legs
+Glutes
+Core
+Full Body
+
+Goal filters:
+
+Muscle Gain
+Strength
+Fat Loss
+General Fitness
+Endurance
+
+==================================================
+13. WORKOUT BUILDER
+==================================================
+
+Add an interactive:
+
+“BUILD YOUR WORKOUT”
+
+Users should be able to select:
+
+Training level
+Goal
+Muscle group
+Available equipment
+Workout duration
+
+Example:
+
+Level:
+Intermediate
+
+Goal:
+Muscle Gain
+
+Muscle:
+Chest + Triceps
+
+Duration:
+60 minutes
+
+Equipment:
+Gym
+
+Then generate a structured workout:
+
+Warm-up
+Main workout
+Accessory exercises
+Core
+Cooldown
+
+Show:
+
+Exercise
+Sets
+Reps
+Rest
+Equipment
+Target muscles
+
+==================================================
+14. WORKOUT DURATION
+==================================================
+
+Allow users to choose:
+
+20 MIN
+30 MIN
+45 MIN
+60 MIN
+75 MIN
+90 MIN
+
+The workout should automatically adapt.
+
+==================================================
+15. GOAL-BASED TRAINING
+==================================================
+
+Add:
+
+“WHAT'S YOUR GOAL?”
+
+Cards:
+
+BUILD MUSCLE
+GET STRONGER
+LOSE FAT
+IMPROVE FITNESS
+BUILD ENDURANCE
+GENERAL FITNESS
+
+Each goal should lead to appropriate training guidance.
+
+==================================================
+16. EXERCISE DETAIL PAGES
+==================================================
+
+When a user opens an exercise, show:
+
+Large real exercise image
+
+Exercise name
+
+Difficulty
+
+Target muscles
+
+Equipment
+
+How to perform
+
+Starting position
+
+Movement
+
+Breathing
+
+Sets & reps
+
+Rest
+
+Common mistakes
+
+Beginner alternative
+
+Intermediate variation
+
+Advanced variation
+
+Safety notes
+
+==================================================
+17. MODERN INTERACTIONS
+==================================================
+
+Add polished interactions:
+
+• Smooth scrolling
+• Hover effects
+• Card animations
+• Scroll reveal animations
+• Equipment image zoom
+• Expandable exercise details
+• Sticky workout navigation
+• Progress indicators
+• Interactive filters
+• Search
+• Level selection
+• Workout duration selector
+
+Animations should be subtle and premium.
+
+Do NOT over-animate the website.
+
+Performance must remain excellent.
+
+==================================================
+18. MOBILE EXPERIENCE
+==================================================
+
+The website must be designed mobile-first.
+
+On mobile:
+
+• Equipment images should remain large and clear
+• Training cards should be easy to read
+• Buttons should be thumb-friendly
+• Filters should become horizontal scrolling chips
+• Workout session should work as a step-by-step experience
+• Sticky “START WORKOUT” button where appropriate
+
+==================================================
+19. TRUST AND SAFETY
+==================================================
+
+Keep a clear disclaimer:
+
+“This website provides general fitness education and is not medical advice.”
+
+Include guidance to consult a qualified professional when appropriate.
+
+Do not make unrealistic promises such as:
+
+“Lose 10 kg in 30 days.”
+
+Do not prescribe medical treatment.
+
+==================================================
+20. NAVIGATION
+==================================================
+
+Create a clean navigation:
+
+HOME
+EQUIPMENT
+WORKOUTS
+BEGINNER
+INTERMEDIATE
+ADVANCED
+GOALS
+EXERCISES
+
+Primary button:
+
+START WORKOUT
+
+On mobile use a clean hamburger navigation.
+
+==================================================
+21. DESIGN LANGUAGE
+==================================================
+
+The final website should feel:
+
+Premium
+Modern
+Athletic
+Confident
+Clean
+Professional
+Beginner-friendly
+
+Use strong typography.
+
+Use large photography.
+
+Use generous spacing.
+
+Use cards with subtle borders/shadows.
+
+Use a sophisticated dark + light visual system.
+
+Avoid making every section dark.
+
+Avoid excessive gradients.
+
+Avoid excessive rounded cards.
+
+Avoid generic AI-generated fitness aesthetics.
+
+The equipment photography should make the website visually impressive.
+
+==================================================
+22. IMPORTANT CONTENT PRINCIPLE
+==================================================
+
+Do not overwhelm beginners.
+
+The website should progressively reveal complexity:
+
+BEGINNER
+Simple explanations
+Machine-based training
+Basic movements
+Lower volume
+Technique first
+
+INTERMEDIATE
+More exercises
+More free weights
+Structured splits
+Progressive overload
+Moderate volume
+
+ADVANCED
+Higher training volume
+Complex programming
+Advanced exercise variations
+Intensity techniques
+Advanced progression
+
+The three levels must feel genuinely different.
+
+==================================================
+23. FINAL HOMEPAGE FLOW
+==================================================
+
+Use this homepage structure:
+
+HERO
+
+↓
+WHAT'S YOUR LEVEL?
+Beginner | Intermediate | Advanced
+
+↓
+
+WHAT'S YOUR GOAL?
+Muscle | Strength | Fat Loss | Fitness | Endurance
+
+↓
+
+EXPLORE MODERN EQUIPMENT
+Large real equipment photography
+
+↓
+
+HOW A SESSION WORKS
+Pre-Gym → Warm-up → Workout → Core → Cooldown → Recovery
+
+↓
+
+FEATURED WORKOUTS
+Beginner | Intermediate | Advanced
+
+↓
+
+EQUIPMENT LIBRARY
+
+↓
+
+EXERCISE LIBRARY
+
+↓
+
+BUILD YOUR WORKOUT
+
+↓
+
+FAQ
+
+↓
+
+FINAL CTA
+
+“YOUR NEXT WORKOUT STARTS HERE.”
+
+[START YOUR WORKOUT]
+
+==================================================
+24. CRITICAL IMPLEMENTATION REQUIREMENT
+==================================================
+
+Use the existing website as the starting point.
+
+Do not remove the existing educational value.
+
+Preserve the useful concepts already present:
+
+• Gym floor map
+• Equipment walkthrough
+• Machine explanations
+• First 30-minute workout
+• Gym etiquette
+• What to bring
+• FAQ
+
+Upgrade these concepts instead of deleting them.
+
+Replace the simple SVG machine illustrations with real, modern equipment photography wherever possible.
+
+The final result should feel like a complete fitness platform rather than a simple beginner article.
+
+Prioritize:
+
+1. REAL EQUIPMENT PHOTOGRAPHY
+2. BEGINNER / INTERMEDIATE / ADVANCED EXPERIENCE
+3. COMPLETE WORKOUT SESSIONS
+4. PRE-GYM + POST-GYM ROUTINES
+5. EQUIPMENT LIBRARY
+6. EXERCISE LIBRARY
+7. GOAL-BASED TRAINING
+8. WORKOUT BUILDER
+9. PREMIUM UI/UX
+10. MOBILE EXPERIENCE
+
+Build the website so that a first-time gym user can enter the website and immediately understand:
+
+“What should I do before the gym?”
+
+“What should I do during my workout?”
+
+“What should I do after my workout?”
+
+And an experienced user should still find the advanced training content useful and visually attractive.

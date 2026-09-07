@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What should I eat? — Gym Basics</title>
+<meta name="description" content="Free BMR, TDEE and calorie calculator with a protein target, read from the training week you actually do — higher on lifting days, lower on rest days.">
+<link rel="canonical" href="https://file.devalla.tech/gym/nutrition.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gym Basics">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Eat for the training you actually do">
+<meta property="og:description" content="Calorie and protein targets built from your own training week, not a dropdown. Free and offline.">
+<meta property="og:url" content="https://file.devalla.tech/gym/nutrition.html">
+<meta property="og:image" content="https://file.devalla.tech/gym/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An overhead map of a gym floor divided into three zones: cardio, machines, and free weights.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eat for the training you actually do">
+<meta name="twitter:description" content="Calorie and protein targets built from your own training week, not a dropdown. Free and offline.">
+<meta name="theme-color" content="#0F1319">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<!-- The above-the-fold faces, preloaded so they arrive before first paint.
+     Paired with font-display: optional in styles.css, that removes the
+     late swap that was reflowing the hero. -->
+<link rel="preload" href="fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#nutrition">Skip to your target</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="23" height="23" rx="5" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 13h12M9.5 9.5v7M16.5 9.5v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Gym Basics</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="head-nav" aria-label="Site">
+      <a href="programs.html">Programs</a>
+      <a href="nutrition.html" aria-current="page">Nutrition</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="guide.html">First day</a>
+    </nav>
+    <a class="btn btn-light btn-sm head-cta" href="week.html">My week</a>
+  </div>
+</header>
+
+<div class="page-head on-dark">
+  <div class="wrap">
+    <span class="eyebrow">Your training · your body · your target</span>
+    <h1 class="h-sec">What should I eat?</h1>
+    <p class="lede">Every calorie calculator asks you to pick a "training activity level" from a dropdown and guess. This
+    one doesn't ask. It reads the training week you already built — the real sessions, their real length, what is actually
+    in them — and costs the day from that.</p>
+    <a class="btn btn-light head-jump" href="#nutrition">Work out my target ↓</a>
+  </div>
+</div>
+
+<main id="nutrition">
+  <section class="section">
+    <div class="wrap">
+
+      <div class="builder-panel" id="nutriProfile" hidden>
+        <p class="panel-intro">Five things, once. It all stays on this device — no account, nothing sent anywhere.</p>
+
+        <div class="field">
+          <span class="field-label" id="lbl-sex">Sex</span>
+          <div class="seg" role="group" aria-labelledby="lbl-sex" aria-describedby="help-sex">
+            <button type="button" name="sex" data-val="male">Male</button>
+            <button type="button" name="sex" data-val="female">Female</button>
+          </div>
+          <p class="field-help" id="help-sex">The resting-energy equation needs it — men and women of the same weight burn measurably differently at rest. It is not used for anything else.</p>
+        </div>
+
+        <div class="field field-nums">
+          <label class="num-field">
+            <span class="field-label">Age</span>
+            <input name="age" type="number" autocomplete="off" inputmode="numeric" min="14" max="99" step="1" value="25">
+            <span class="unit">years</span>
+          </label>
+          <label class="num-field">
+            <span class="field-label">Height</span>
+            <input name="height" type="number" autocomplete="off" inputmode="numeric" min="120" max="230" step="1" value="170">
+            <span class="unit">cm</span>
+          </label>
+          <label class="num-field">
+            <span class="field-label">Weight</span>
+            <input name="weight" type="number" autocomplete="off" inputmode="decimal" min="25" max="300" step="0.1" value="70">
+            <span class="unit">kg</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <span class="field-label" id="lbl-activity">What are your days like outside the gym?</span>
+          <div class="seg" role="group" aria-labelledby="lbl-activity" aria-describedby="help-activity">
+            <button type="button" name="activity" data-val="sitting">Desk job, mostly sitting</button>
+            <button type="button" name="activity" data-val="mixed">On your feet a fair bit</button>
+            <button type="button" name="activity" data-val="physical">Physical work all day</button>
+          </div>
+          <p class="field-help" id="help-activity">The one thing your training plan genuinely cannot tell us. A site engineer and a software engineer of the same weight, running the same programme, are several hundred calories apart. Answer for a normal week, not your busiest one.</p>
+        </div>
+
+        <div class="field">
+          <span class="field-label" id="lbl-diet">What do you eat?</span>
+          <div class="seg" role="group" aria-labelledby="lbl-diet" aria-describedby="help-diet">
+            <button type="button" name="diet" data-val="veg">Vegetarian</button>
+            <button type="button" name="diet" data-val="egg">Veg + eggs</button>
+            <button type="button" name="diet" data-val="nonveg">Non-vegetarian</button>
+          </div>
+          <p class="field-help" id="help-diet">Only changes the worked example further down — the targets themselves are the same either way. Hitting protein on a vegetarian diet takes more planning, not more money.</p>
+        </div>
+
+        <p class="nutri-err empty-note" hidden></p>
+        <button class="btn btn-primary btn-lg nutri-save" type="button">Work out my target</button>
+      </div>
+
+      <div class="nutri-out" id="nutriOut" hidden aria-live="polite"></div>
+
+      <script>
+        /* Both panels start hidden so that with JavaScript off the reader
+           gets the noscript note rather than a form that cannot submit.
+           That left nutrition-ui.js to unhide one of them after paint,
+           which reflowed everything below it (CLS 0.27). This runs inline,
+           before paint, and only picks which panel is coming — the real
+           validation still happens in nutrition-ui.js a moment later. */
+        (function () {
+          try {
+            var el = localStorage.getItem("gb:profile")
+              ? document.getElementById("nutriOut")
+              : document.getElementById("nutriProfile");
+            if (el) el.hidden = false;
+          } catch (e) {}
+        })();
+      </script>
+
+      <p class="sec-lede nutri-how">Lift today and the number goes up. Rest tomorrow and it comes back down. Your training
+      level is never asked for — it comes from the week you already built, so the food can never disagree with the
+      training. And because a beginner and an advanced lifter do not eat the same way, that level sets the protein, the
+      size of the surplus or deficit, and how many times a day you eat.</p>
+
+      <noscript>
+        <div class="empty-note" style="margin-top:24px"><b>The target needs JavaScript</b> — it is worked out on your
+        device rather than on a server, which is why there is no account and no subscription. The plain-English version
+        is below and works on its own.</div>
+      </noscript>
+
+      <section class="calc-section" id="calcSection">
+        <h2 class="sub-h">Calorie calculator</h2>
+        <p class="calc-lede">The numbers above are for the plan you are actually on. This is for everything else —
+        what happens if you train five days instead of three, what maintenance looks like ten kilos from now, whether
+        the deficit still works when you change jobs. Nothing here is saved unless you ask it to be.</p>
+
+        <div class="calc">
+          <div class="calc-inputs">
+            <div class="field">
+              <span class="field-label" id="lbl-c-sex">Sex</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-sex">
+                <button type="button" name="c-sex" data-val="male">Male</button>
+                <button type="button" name="c-sex" data-val="female">Female</button>
+              </div>
+            </div>
+
+            <div class="field field-nums">
+              <label class="num-field">
+                <span class="field-label">Age</span>
+                <input name="c-age" type="number" autocomplete="off" inputmode="numeric" min="14" max="99" step="1" value="25">
+                <span class="unit">years</span>
+              </label>
+              <label class="num-field">
+                <span class="field-label">Height</span>
+                <input name="c-height" type="number" autocomplete="off" inputmode="numeric" min="120" max="230" step="1" value="170">
+                <span class="unit">cm</span>
+              </label>
+              <label class="num-field">
+                <span class="field-label">Weight</span>
+                <input name="c-weight" type="number" autocomplete="off" inputmode="decimal" min="25" max="300" step="0.5" value="70">
+                <span class="unit">kg</span>
+              </label>
+            </div>
+
+            <div class="field">
+              <span class="field-label" id="lbl-c-activity">Days outside the gym</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-activity">
+                <button type="button" name="c-activity" data-val="sitting">Mostly sitting</button>
+                <button type="button" name="c-activity" data-val="mixed">On your feet</button>
+                <button type="button" name="c-activity" data-val="physical">Physical work</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label" id="lbl-c-level">Training level</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-level">
+                <button type="button" name="c-level" data-val="1">Beginner</button>
+                <button type="button" name="c-level" data-val="2">Intermediate</button>
+                <button type="button" name="c-level" data-val="3">Advanced</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label" id="lbl-c-goal">Goal</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-goal">
+                <button type="button" name="c-goal" data-val="muscle">Build muscle</button>
+                <button type="button" name="c-goal" data-val="strength">Get stronger</button>
+                <button type="button" name="c-goal" data-val="fatloss">Lose fat</button>
+                <button type="button" name="c-goal" data-val="fitness">General fitness</button>
+                <button type="button" name="c-goal" data-val="endurance">Endurance</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label" id="lbl-c-days">Training days a week</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-days">
+                <button type="button" name="c-days" data-val="2">2</button>
+                <button type="button" name="c-days" data-val="3">3</button>
+                <button type="button" name="c-days" data-val="4">4</button>
+                <button type="button" name="c-days" data-val="5">5</button>
+                <button type="button" name="c-days" data-val="6">6</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label" id="lbl-c-duration">Session length</span>
+              <div class="seg seg-sm" role="group" aria-labelledby="lbl-c-duration">
+                <button type="button" name="c-duration" data-val="30">30 min</button>
+                <button type="button" name="c-duration" data-val="45">45 min</button>
+                <button type="button" name="c-duration" data-val="60">60 min</button>
+                <button type="button" name="c-duration" data-val="75">75 min</button>
+                <button type="button" name="c-duration" data-val="90">90 min</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-out" id="calcOut" aria-live="polite"></div>
+        </div>
+
+        <noscript>
+          <div class="empty-note">The calculator needs JavaScript. The plain-English version is below.</div>
+        </noscript>
+      </section>
+
+      <div class="keybox" style="margin-top:48px">
+        <h2>The whole thing in six lines</h2>
+        <p><strong>Protein is the one that matters</strong> — 1.6 g per kilo of bodyweight as a beginner, rising
+        toward 2.2 as you advance and higher again in a deficit, every day, training or not. <strong>Calories decide the direction</strong> — more than you burn and you gain, fewer and
+        you lose, and the training decides what kind of weight moves. <strong>Carbohydrate is the training fuel</strong>,
+        so it rises on the days you lift and falls on the days you don't. <strong>Fat has a floor</strong> you should
+        not go under, around 0.6 g per kilo. <strong>None of this needs a supplement</strong> — dal, curd, eggs, paneer,
+        chana and chicken cover it. <strong>And the scale is the referee</strong>: if your weight is not moving the way
+        the plan says it should after a fortnight, the plan is wrong, not the scale.</p>
+      </div>
+
+      <div class="warn-box" style="margin-top:24px">
+        <p><strong>Please read.</strong> This is general education, not dietary advice, and it has not been reviewed by
+        a dietitian or a doctor. Do not use it if you are pregnant or breastfeeding, under 18, managing diabetes, kidney
+        or liver disease, or have any history of disordered eating — those all need targets set by a professional who
+        can see your bloods. If you feel unwell, lightheaded or your periods stop, stop and see a doctor.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="week.html">My week</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="programs.html">Programs</a>
+      <a href="equipment.html">Equipment library</a>
+      <a href="exercises.html">Exercise library</a>
+      <a href="beginner.html">Beginner</a>
+      <a href="intermediate.html">Intermediate</a>
+      <a href="advanced.html">Advanced</a>
+      <a href="builder.html">Workout builder</a>
+      <a href="guide.html">First-day guide</a>
+    </nav>
+    <p class="foot-honest">No ads. Nothing for sale. No account, no tracking — your plan is stored on this device only.</p>
+    <p class="disclaimer">
+      <strong>Please read:</strong> This website provides general fitness education and is not medical
+      advice. It has not been reviewed by a doctor or a qualified trainer. If you have an injury or a
+      health condition, are pregnant, or your doctor has advised you about exercise, speak to them
+      before you start.
+    </p>
+    <p class="foot-legal">© 2026 Gym Basics. Free to share.</p>
+  </div>
+</footer>
+
+<script src="data.js" defer></script>
+<script src="plan.js" defer></script>
+<script src="nutrition.js" defer></script>
+<script src="foods.js" defer></script>
+<script src="app.js" defer></script>
+<script src="nutrition-ui.js" defer></script>
+</body>
+</html>
